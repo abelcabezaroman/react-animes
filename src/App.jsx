@@ -1,0 +1,25 @@
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AnimesPage } from "./pages/AnimesPage/Animes.page";
+
+function App () {
+    return (
+        <Router>
+
+            <div className="container-fluid justify-content-center my-4 u-font-size-16">
+
+                <Switch>
+
+                    <Route path="/animes">
+                        <AnimesPage/>
+                    </Route>
+
+                </Switch>
+            </div>
+
+        </Router>
+    );
+}
+
+export default App;
