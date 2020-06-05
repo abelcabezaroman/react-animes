@@ -1,0 +1,31 @@
+.b-primereact-paginator {
+  &.p-paginator {
+    display: flex;
+    justify-content: center;
+    .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
+      background-color: $color-white;
+      padding: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: .25rem;
+      border-radius: 3px;
+      color: $color-primary-text;
+      border: 2px solid $color-white;
+    }
+    .p-paginator-next{
+      margin-left: 2rem;
+    }
+    .p-paginator-prev{
+      margin-right: 2rem;
+    }
+    .p-disabled{
+      opacity: .5;
+    }
+    .p-highlight{
+      color: $color-white;
+      background-color: $color-primary-text;
+
+    }
+  }
+}
