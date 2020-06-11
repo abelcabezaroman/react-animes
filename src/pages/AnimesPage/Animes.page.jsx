@@ -14,7 +14,6 @@ export function AnimesPage () {
     const [filterValues, setFilterValues] = useState({ name: '', category: '' });
     const [totalRecors, setTotalRecords] = useState(0);
 
-
     useEffect(() => {
         axios.get(environment.url + 'anime?page[limit]=' + itemsPerPage + '&page[offset]=0').then(res => {
             const animesLocal = res.data.data;
