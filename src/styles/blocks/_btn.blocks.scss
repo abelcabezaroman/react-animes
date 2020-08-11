@@ -1,8 +1,40 @@
 .b-btn {
   width: 100%;
-  background-color: transparent;
+  background-color: #FFFFFF;
   padding: 2rem;
   cursor: pointer;
   border: 2px solid $color-white;
-  color: $color-white;
+  color: $color-primary-text;
+
+  &--sec {
+    background-color: cornflowerblue;
+  }
+
+  &--third {
+    background-color: white;
+  }
+  &--auto{
+    width: auto;
+    min-width: 25rem;
+  }
+  &--big{
+    padding: 4rem;
+    font-size: 3rem;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

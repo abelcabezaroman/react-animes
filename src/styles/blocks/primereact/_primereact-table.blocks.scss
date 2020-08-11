@@ -1,0 +1,16 @@
+.b-primereact-table {
+  &.p-datatable {
+
+    .p-datatable-thead {
+      background-color: #FFFFFF;
+      > tr > th{
+        padding: 2rem;
+      }
+    }
+  }
+
+  .p-column-title {
+    color: #333333;
+  }
+}
+

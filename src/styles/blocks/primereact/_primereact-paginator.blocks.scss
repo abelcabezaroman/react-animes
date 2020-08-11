@@ -2,6 +2,8 @@
   &.p-paginator {
     display: flex;
     justify-content: center;
+
+
     .p-paginator-page, .p-paginator-next, .p-paginator-last, .p-paginator-first, .p-paginator-prev {
       background-color: $color-white;
       padding: 2rem;
@@ -13,19 +15,22 @@
       color: $color-primary-text;
       border: 2px solid $color-white;
     }
-    .p-paginator-next{
+
+    .p-paginator-next {
       margin-left: 2rem;
     }
-    .p-paginator-prev{
+
+    .p-paginator-prev {
       margin-right: 2rem;
     }
-    .p-disabled{
+
+    .p-disabled {
       opacity: .5;
     }
-    .p-highlight{
+
+    .p-highlight {
       color: $color-white;
       background-color: $color-primary-text;
-
     }
   }
 }

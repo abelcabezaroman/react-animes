@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './AnimeSearch.scss'
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { environment } from "../../../environments/environment";
+import { Button } from "primereact/button";
 
 
 export function AnimeSearch (props) {
@@ -14,7 +13,7 @@ export function AnimeSearch (props) {
     const onSubmit = data => props.fnSubmit(data)
 
     useEffect(() => {
-        axios.get(environment.url + 'categories?page[limit]=500').then(res => {
+        axios.get(process.env.REACT_APP_BACK_URL + 'categories?page[limit]=500').then(res => {
             setCategories(res.data.data);
         })
     }, []);
@@ -36,13 +35,15 @@ export function AnimeSearch (props) {
                             ref={register}>
                         <option className="b-select__option" value=''>No category filter</option>
                         {categories.map(category =>
-                            <option className="b-select__option" value={category.slug}>{category.attributes.title}</option>
+                            <option className="b-select__option"
+                                    value={category.slug}>{category.attributes.title}</option>
                         )}
                     </select>
                 </label>
 
 
-                <input className="b-btn mt-3" type="submit"/>
+                {/*<Button className="b-primereact-button mt-3" label="Search"/>*/}
+                <input className="b-btn mt-3" value="Search" type="submit"/>
 
             </form>
         </div>
