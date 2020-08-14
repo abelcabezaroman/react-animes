@@ -1,0 +1,13 @@
+.b-change-view {
+  &__icon {
+    background-color: #f4f4f4;
+    padding: 2rem;
+
+    cursor: pointer;
+    color: #1B7AC2;
+
+    &--unselected {
+      opacity: .6;
+    }
+  }
+}

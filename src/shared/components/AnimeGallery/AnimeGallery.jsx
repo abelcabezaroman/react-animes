@@ -26,9 +26,12 @@ export function AnimeGallery (props) {
 
     return (
         <div className="c-anime-gallery">
-            <div className="d-flex justify-content-center mt-5">
-                <button className="b-btn b-btn--auto" onClick={() => setShowGallery(!showGallery)}>Change type view
-                </button>
+            <div className="b-change-view d-flex justify-content-center mt-5">
+                <span className={showGallery ? "b-change-view__icon b-icon icon-photo" : "b-change-view__icon" +
+                    " b-change-view__icon--unselected b-icon icon-photo"} onClick={() => setShowGallery(true)}/>
+                <span className={showGallery ? "b-change-view__icon b-change-view__icon--unselected b-icon" +
+                    " icon-list" : "b-change-view__icon" +
+                    " b-icon icon-list"} onClick={() => setShowGallery(false)}/>
             </div>
 
             {!showGallery && <DataTable className="b-primereact-table mt-4" value={props.animes}>
@@ -39,7 +42,7 @@ export function AnimeGallery (props) {
 
             {showGallery && <div className="row">
                 {props.animes.map((item, index) =>
-                    <div className={index < 3 ? "col-4" : "col-3"} key={index}>
+                    <div className={index < 3 ? "col-12 col-sm-4 col-lg-4" : "col-12 col-sm-6 col-md-4 col-lg-3"} key={index}>
                         <a href={'https://kitsu.io/anime/' + item.id} target="_blank"
                            className="c-anime-gallery__item-container">
                             <figure

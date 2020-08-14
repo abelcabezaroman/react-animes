@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import { AnimeGallery } from "../../shared/components/AnimeGallery/AnimeGallery";
 import { AnimeSearch } from "../../shared/components/AnimeSearch/AnimeSearch";
-import { Paginator } from "primereact/paginator";
 
 const itemsPerPage = 19;
 const defaultPageInfo = { first: 1, rows: itemsPerPage };
@@ -52,7 +51,9 @@ export function AnimesPage () {
 
     return (
         <div>
-            <h1 className="b-text-primary d-flex justify-content-center">Animes <span className="icon-pencil"/></h1>
+            <div>
+                <h1 className="b-text-primary d-flex align-items-center justify-content-center">Animes <span className="ml-3 icon-tv"/></h1>
+            </div>
             <AnimeSearch fnSubmit={filterAnimes}/>
             <AnimeGallery totalRecords={totalRecords} pageInfo={pageInfo} animes={animes} fnChangePage={changePage}/>
         </div>
