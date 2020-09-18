@@ -1,0 +1,22 @@
+.b-primereact-carousel{
+  .p-carousel-prev, .p-carousel-next{
+    background-color: white;
+    border-radius: 100%;
+    border: 0;
+  }
+
+  &__item{
+    border: 2px solid;
+    position: relative;
+  }
+  &__title{
+    background-color: #ffffffb3;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+}

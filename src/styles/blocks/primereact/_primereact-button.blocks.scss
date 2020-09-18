@@ -1,13 +1,12 @@
 .b-primereact-button{
   &.p-button{
-    background-color: #FFF;
+    padding: 10px;
+    background-color: white;
     border: 0;
-    width: 100%;
-  }
-  &.p-button-text-only .p-button-text{
-    padding: 2rem;
+    min-width: 148px;
   }
 
+  
   &--auto{
     &.p-button{
       width: auto;
@@ -16,7 +15,7 @@
   }
 
   &--big{
-    &.p-button-text-only .p-button-text{
+    &.p-button{
       padding: 4rem;
       font-size: 3rem;
     }
