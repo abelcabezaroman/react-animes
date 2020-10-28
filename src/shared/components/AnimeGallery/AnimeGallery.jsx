@@ -41,16 +41,16 @@ export function AnimeGallery (props) {
             </DataTable>}
 
             {showGallery && <div className="row">
-                {props.animes.map((item, index) =>
+                {props.animes.map((anime, index) =>
                     <div className={index < 3 ? "col-12 col-sm-4 col-lg-4" : "col-12 col-sm-6 col-md-4 col-lg-3"} key={index}>
-                        <a href={'https://kitsu.io/anime/' + item.id} target="_blank"
+                        <a href={'https://kitsu.io/anime/' + anime.id} target="_blank"
                            className="c-anime-gallery__item-container">
                             <figure
                                 className={index < 3 ? "c-anime-gallery__item c-anime-gallery__item--max" : "c-anime-gallery__item"}>
-                                <img src={item.attributes.posterImage && item.attributes.posterImage.original} alt=""
+                                <img src={anime.attributes.posterImage && anime.attributes.posterImage.original} alt=""
                                      className="c-anime-gallery__img"/>
                                 <figcaption
-                                    className="c-anime-gallery__caption">{item.attributes.canonicalTitle}</figcaption>
+                                    className="c-anime-gallery__caption">{anime.attributes.canonicalTitle}</figcaption>
                             </figure>
                         </a>
                     </div>

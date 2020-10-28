@@ -1,30 +1,34 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 import { useState } from 'react';
+import { Button } from 'primereact/button';
 
 
-export default function HomePage () {
-    const [animes] = useState([
-        {title: 'Hellsing',
-        gender: 'Gore',
-        img: 'https://i.ytimg.com/vi/QFoECKJvfnE/maxresdefault.jpg'},
-        {title: 'Code Geass',
-        gender: 'Gore',
-        img: 'https://thegeekclinic.files.wordpress.com/2014/10/code-geass2.jpg'},
-        {title: 'Death Note',
-        gender: 'Gore',
-        img: 'http://img04.deviantart.net/33ca/i/2015/104/7/c/death_note_by_zzyzzyy-d8bsgvr.jpg'}
-    ]);
+export default function HomePage() {
+    // const [animes] = useState([
+    //     {title: 'Hellsing',
+    //     gender: 'Gore',
+    //     img: 'https://i.ytimg.com/vi/QFoECKJvfnE/maxresdefault.jpg'},
+    //     {title: 'Code Geass',
+    //     gender: 'Gore',
+    //     img: 'https://thegeekclinic.files.wordpress.com/2014/10/code-geass2.jpg'},
+    //     {title: 'Death Note',
+    //     gender: 'Gore',
+    //     img: 'http://img04.deviantart.net/33ca/i/2015/104/7/c/death_note_by_zzyzzyy-d8bsgvr.jpg'}
+    // ]);
 
-    const itemTemplate = (anime) => <div className="b-primereact-carousel__item"><img src={anime.img} alt=""/><span className="b-primereact-carousel__title">{anime.title}</span></div>
-    
+    // const itemTemplate = (anime) => <div className="b-primereact-carousel__item"><img src={anime.img} alt=""/><span className="b-primereact-carousel__title">{anime.title}</span></div>
+
 
     return (<>
-        <h1 className="b-text-primary">WELCOME TO ANIME WIKI</h1>
 
-        <Carousel className="b-primereact-carousel" value={animes} itemTemplate={itemTemplate}></Carousel>
+        <h1 className="b-text-primary">WELCOME TO ANIME WIKI</h1>
+        <span class="icon-calabazaza"></span>
+        <span class="icon-calabaza b-icon"></span>
+        <span class="icon-home2 b-icon b-icon--big"></span>
+        <span class="icon-home2 b-icon b-icon--sec"></span>
+        {/* <Carousel className="b-primereact-carousel" value={animes} itemTemplate={itemTemplate}></Carousel> */}
 
 
         <Button label="Save" />

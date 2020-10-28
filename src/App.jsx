@@ -11,8 +11,8 @@ function App () {
 
             <div className="container-fluid justify-content-center my-4 u-font-size-16">
                 <Menu/>
-                <Switch>
 
+                <Switch>
                     <Route path="/animes">
                         <AnimesPage/>
                     </Route>

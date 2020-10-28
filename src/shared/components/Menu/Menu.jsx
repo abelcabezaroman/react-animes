@@ -6,7 +6,8 @@ export default function Menu () {
         { title: 'Home', url: '' },
         { title: 'Animes', url: 'animes' }
     ]
-    return (<nav>
+    return (
+    <nav>
         <ul>
             {menu.map(item => <Link to={item.url}>{item.title}</Link>)}
         </ul>
