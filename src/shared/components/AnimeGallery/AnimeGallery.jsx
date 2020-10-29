@@ -57,13 +57,7 @@ export function AnimeGallery (props) {
                 )}
             </div>}
 
-            <Paginator className="b-primereact-paginator" first={props.pageInfo.first} rows={props.pageInfo.rows}
-                       totalRecords={props.totalRecords} onPageChange={props.fnChangePage}/>
-
-
-            <Paginator first={props.pageInfo.first} rows={props.pageInfo.rows}
-                       totalRecords={props.totalRecords} onPageChange={props.fnChangePage}/>
-
+           
 
         </div>
 
